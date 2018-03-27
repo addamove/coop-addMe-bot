@@ -44,6 +44,7 @@ function searchFriends(bot, lon, lat, peer) {
 async function mainSearch(bot, peer) {
   const { lon, lat } = users[peer.id];
   const IDs = searchFriends(bot, lon, lat, peer);
+  console.log(IDs);
   if (IDs.length !== 0) {
     try {
       bot.sendTextMessage(peer, 'Рядом с вами находятся пользователи с никнеймами:');

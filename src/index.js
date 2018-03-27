@@ -79,7 +79,29 @@ bot.onInteractiveEvent(event => {
       event.ref.peer,
       'Секундочку...\nСледуйте инструкциям показанным на картинках.'
     );
-    bot.sendImageMessage(event.ref.peer, path.join(__dirname, `./images/1.png`));
-    bot.sendImageMessage(event.ref.peer, path.join(__dirname, `./images/2.png`));
+    bot.sendImageMessage(event.ref.peer, path.join(__dirname, `./images/1_a.png`));
+    bot.sendImageMessage(event.ref.peer, path.join(__dirname, `./images/2_a.png`));
+    bot.sendInteractiveMessage(event.ref.peer, 'Нажмите если у вас iphone.', [
+      {
+        actions: [
+          {
+            id: 'h',
+            widget: {
+              type: 'button',
+              value: 'help_i',
+              label: 'Помощь'
+            }
+          }
+        ]
+      }
+    ]);
+  }
+  if (event.value === 'help_i') {
+    bot.sendTextMessage(
+      event.ref.peer,
+      'Секундочку...\nСледуйте инструкциям показанным на картинках.'
+    );
+    bot.sendImageMessage(event.ref.peer, path.join(__dirname, `./images/1_i.png`));
+    bot.sendImageMessage(event.ref.peer, path.join(__dirname, `./images/2_i.png`));
   }
 });
