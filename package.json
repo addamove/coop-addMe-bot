@@ -13,6 +13,7 @@
   "description": "",
   "dependencies": {
     "@dlghq/dialog-bot-sdk": "^1.2.3",
+    "array-remove": "^1.0.1",
     "axios": "^0.17.1",
     "dotenv": "^5.0.1",
     "prettier-eslint": "^8.8.1",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.9.0"
   }
 }
